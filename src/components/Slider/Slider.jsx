@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
-// import './Slider.css'
-import banner1 from '../../BannerImages/Banner1.jpg'
+import './Slider.css'
 
 const Slider = ({ images }) => {
     const [index, setIndex] = useState(0)
-    console.log(index);
     useEffect(() => {
         const lastIndex = images.length - 1;
         if (index< 0) {
@@ -30,16 +28,16 @@ const Slider = ({ images }) => {
         <div className='section'>
             <div className="section-center">
                 {images.map((image, indexImage) => {
-                    console.log(image);
                     let position = "nextSlide";
-                    if (indexImage === index - 1) {
-                        position = "activslide"
-                    } if (indexImage === index - 1 || (index === 0 && indexImage === images.length - 1)) {
-                        position = "lastSlide"
+                    if (indexImage === index) {
+                        position = "activeSlide";
+                    } if (indexImage === index - 1 ||
+                        (index === 0 && indexImage === images.length - 1)) {
+                        position = "lastSlide";
                     }
                     return (
-                        <article key={indexImage}>
-                            <img src={banner1} alt="slide" className='banner-img1'/>
+                        <article className='article' className={position} key={indexImage}>
+                            <img src={image} alt="slide" className='banner-img'/>
                         </article>
                     )
                 })}

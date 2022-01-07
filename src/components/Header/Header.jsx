@@ -4,9 +4,20 @@ import { Link } from 'react-router-dom'
 import { AiOutlineSearch } from 'react-icons/ai';
 import { HiLocationMarker } from 'react-icons/hi';
 import { FaShoppingCart } from 'react-icons/fa';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { logoutInititate } from '../../redux/auth/action';
 
 const Header = () => {
-    // AiOutlineSearch
+    const { user, basket } = useSelector(state => state.data)
+    // const { basket } = useSelector(state => state.basket)
+    console.log("bsket: ", basket);
+    
+    const dispatch = useDispatch()
+    const handleAuth = () => {
+        dispatch(logoutInititate())
+    }
+
     return (
         <div className='header'>
             <Link to='/'>
@@ -28,10 +39,10 @@ const Header = () => {
                 <AiOutlineSearch className='searchIcon'/>
             </div>
             <div className="header-nav">
-                <Link to="/login" className='header-link'>
-                    <div className="header-option">
-                        <span className='header-option1'>Hello Guest</span>
-                        <span className='header-option2'>Sign In</span>
+                <Link to={user ? "/": "/login"} className='header-link'>
+                    <div onClick={handleAuth} className="header-option">
+                        <span className='header-option1'>Hello {user ? user.email : "Guest"}</span>
+                        <span className='header-option2'>{user ? "Sign Out" : "SIgn In"}</span>
                     </div>
                 </Link>
                 <Link to="/order" className='header-link'>
@@ -43,7 +54,7 @@ const Header = () => {
                 <Link to="/checkout" className='header-link'>
                     <div className="header-basket">
                         <FaShoppingCart/>
-                        <span className="header-option2 basket-count">0</span>
+                        <span className="header-option2 basket-count">{basket && basket.length}</span>
                     </div>
                 </Link>
             </div>

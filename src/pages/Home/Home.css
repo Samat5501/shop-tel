@@ -1,13 +1,16 @@
 .home {
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 1200px;
+    margin: 0 auto;
     justify-content: center;
+    align-items: center;
     display: flex;
+    border: black 2px solid;
   }
   
   .item-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     background-color: #2b2727
   }
@@ -18,6 +21,12 @@
     font-family: Arial, sans-serif;
   }
   
+  .home-container{
+    border: springgreen solid 2px;
+    margin: 0 auto;
+    margin-left: -800px;
+  }
+
   .home-row {
     display: flex;
     z-index: 1;
@@ -31,4 +40,3 @@
     margin-bottom: -150px;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   }
-  

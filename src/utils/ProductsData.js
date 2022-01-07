@@ -1,6 +1,6 @@
 const products = [
   {
-    id: "1",
+    id: 1,
     title: "Diverse Men's Regular Formal Shirt",
     price: 16,
     rating: 5,
@@ -20,7 +20,7 @@ const products = [
       "https://images-na.ssl-images-amazon.com/images/I/81qlnA0rJEL._UL1500_.jpg",
   },
   {
-    id: "2",
+    id: 2,
     title: "REDMI Note 10 (Aqua Green, 64 GB)  (4 GB RAM)",
     price: 11,
     rating: 3,
@@ -37,7 +37,7 @@ const products = [
       "https://images-na.ssl-images-amazon.com/images/I/71OGzLCrjZS._SL1500_.jpg",
   },
   {
-    id: "3",
+    id: 3,
     title: "Lenovo Tab M10 HD 2nd Gen (10.1 inch, 4 GB, 64 GB, Wi-Fi+LTE)",
     price: 11,
     rating: 4,
@@ -54,7 +54,7 @@ const products = [
       "https://images-na.ssl-images-amazon.com/images/I/41jdvXSoeyS._SL1000_.jpg",
   },
   {
-    id: "4",
+    id: 4,
     title:
       "HP Pavilion Gaming 10th Gen Intel Core i5 Processor 16.1 (40.9 cms) FHD Gaming Laptop",
     price: 11,
@@ -73,7 +73,7 @@ const products = [
       "https://images-na.ssl-images-amazon.com/images/I/71FHcGAPevL._SL1498_.jpg",
   },
   {
-    id: "5",
+    id: 5,
     title: "crocs Unisex-Adult Bayaband Clog",
     price: 23,
     rating: 4,
@@ -92,7 +92,7 @@ const products = [
       "https://images-na.ssl-images-amazon.com/images/I/712Brp0hwfL._UL1500_.jpg",
   },
   {
-    id: "1234",
+    id: 6,
     title:
       "LG 27 inch 4K-UHD (3840 x 2160) HDR 10 Monitor (Gaming & Design) with IPS Panel",
     price: 11,

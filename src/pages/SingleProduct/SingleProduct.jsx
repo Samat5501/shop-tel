@@ -1,15 +1,15 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { useParams } from 'react-router'
+import { useParams } from 'react-router-dom'
 import { addToBasket } from '../../redux/auth/action'
 import { products } from '../../utils/ProductsData'
 import './SingleProduct.css'
 
 const SingleProduct = () => {
-    const { id } = useParams()
-    console.log("id: ",id);
-    let singleProduct = products?.find((item) => item.id === 2)
-    console.log("singleProduct", products);
+    let {id} = useParams()
+    console.log("id: ", id);
+    let singleProduct = products.find((item) => item.id == id)
+    console.log("singleProduct", singleProduct);
 
     const dispatch = useDispatch()
     const addItemToBasket = () => {

@@ -27,7 +27,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Switch>
-          <Route exact path="/product/:id">
+          <Route path="/product/:id">
             <Header />
             <SingleProduct/>
           </Route>
